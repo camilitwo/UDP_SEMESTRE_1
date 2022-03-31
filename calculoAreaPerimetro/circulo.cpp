@@ -14,7 +14,8 @@ int main(){
     cout<<"El área corresponde a: "<<pi*pow(radio, 2)<<" cm.\n";
     cout<<"El perímetro corresponde a: "<<2*pi*radio<<" cm. \n";
 
-    system("pause");
+    cin.ignore();
+    cin.get();
 
     return 0;
 }
