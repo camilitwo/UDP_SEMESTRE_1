@@ -14,7 +14,8 @@ int main(){
     cout<<"El área corresponde a: "<<area<<" cm.\n";
     cout<<"El perímetro corresponde a: "<<lado1*4<<" cm. \n";
 
-    system("pause");
+    cin.ignore();
+    cin.get();
 
     return 0;
 }
