@@ -4,7 +4,7 @@ using namespace std;
 int main ()
 {
     
-    cout << "Descuento Tienda" << endl;
+    cout << "\t\tDescuento Tienda\t\n" << endl;
     double cuenta = 0;
     cout << "Ingrese el total de la compra en pesos Chilenos\n" << endl;
     cin >> cuenta;
