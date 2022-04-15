@@ -38,6 +38,7 @@ int main()
     std::cout << "\nIngrese año (####)"<< std::endl;
     cin >> anio;
 
+
     if(anio<1900 || mes<1 || mes>12 ){
         std::cout << "[Error] datos no validos" << std::endl;
         return -1;
