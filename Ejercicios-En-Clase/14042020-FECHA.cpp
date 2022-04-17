@@ -31,12 +31,17 @@ int main()
     int mes = 0;
     string nombreMes = "";
     int cantDias = 0;
+    int fecha;
 
     std::cout << "\tFECHA\t" << std::endl;
-    std::cout << "\nIngrese mes (##)"<< std::endl;
-    cin >> mes;
-    std::cout << "\nIngrese año (####)"<< std::endl;
-    cin >> anio;
+    std::cout << "\nIngrese fecha (YYYYMMDD)"<< std::endl;
+    cin >> fecha;
+    //cin >> mes;
+    //std::cout << "\nIngrese año (####)"<< std::endl;
+    // cin >> anio;
+    fecha = fecha /100;
+    mes = fecha %100;
+    anio = fecha / 100;
 
 
     if(anio<1900 || mes<1 || mes>12 ){
@@ -44,64 +49,22 @@ int main()
         return -1;
     }
 
-
-    switch (mes)
-    {
-    case 1:
-        nombreMes = "Enero";
-        cantDias = 31;
-        break;
-    case 2:
-        nombreMes = "Febrero";
-        cantDias = esBisiesto(anio);
-        break;
-    case 3:
-        nombreMes = "Marzo";
-        cantDias = 31;
-        break;
-    case 4:
-        nombreMes = "Abril";
+    if(mes == 1||
+        mes == 3||
+        mes == 5||
+        mes == 7||
+        mes == 8||
+        mes ==10||
+        mes == 12){
+           cantDias = 31; 
+    }else{
         cantDias = 30;
-        break;
-    case 5:
-        nombreMes = "Mayo";
-        cantDias = 31;
-        break;
-    case 6:
-        nombreMes = "Junio";
-        cantDias = 30;
-        break;
-    case 7:
-        nombreMes = "Julio";
-        cantDias = 31;
-        break;
-    case 8:
-        nombreMes = "Agosto";
-        cantDias = 31;
-        break;
-    case 9:
-        nombreMes = "Septiembre";
-        cantDias = 30;
-        break;
-    case 10:
-        nombreMes = "Octubre";
-        cantDias = 31;
-        break;
-    case 11:
-        nombreMes = "Noviembre";
-        cantDias = 30;
-        break;
-    case 12:
-        nombreMes = "Diciembre";
-        cantDias = 31;
-        break;
-    default:
-        std::cout << "No es posible entregar información ya que el mes "<<mes<<" no esta dentro del calendario" << std::endl;
-        return -1;
-
+        if(mes ==2){
+           cantDias = esBisiesto(anio);
+        }
     }
 
-    std::cout << "\nEl mes "<<mes<<" ("<<nombreMes<<") del año "<<anio << " tiene " <<cantDias<<" días" << std::endl;
+    std::cout << "\nEl mes "<<mes<<" del año "<<anio << " tiene " <<cantDias<<" días" << std::endl;
     cin.ignore();
     cin.get();
 
