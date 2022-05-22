@@ -23,7 +23,7 @@ string upperString(string text){
 
 int main(){
     bool band = true;
-    
+    //prueba Compilacion
     
     char numero[30];
     string opt = "";
