@@ -1,0 +1,3 @@
+C:/Users/camil/CLionProjects/AGRICULTOE/cmake-build-debug/CMakeFiles/AGRICULTOE.dir
+C:/Users/camil/CLionProjects/AGRICULTOE/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/camil/CLionProjects/AGRICULTOE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
